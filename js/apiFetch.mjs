@@ -40,7 +40,7 @@ export async function apiFetch(endpoint, method = "GET", body = null) {
       "Failed to fetch data. Please log in and try again."
     );
     setTimeout(() => {
-      window.location.href = "../account/login.html";
+      window.location.href = "./account/login.html";
     }, 1000);
   } finally {
     setTimeout(() => {

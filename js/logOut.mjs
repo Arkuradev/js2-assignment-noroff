@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const basePath =
     window.location.pathname.includes("/account/") ||
-    window.location.pathname.includes("/post/")
+    window.location.pathname.includes("/post/") ||
+    window.location.pathname.includes("/pages/")
       ? "../account/login.html"
       : "account/login.html";
 

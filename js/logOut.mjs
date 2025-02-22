@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const basePath = window.location.pathname.includes("/account/")
-    ? "../account/login.html"
-    : "account/login.html";
+  const basePath =
+    window.location.pathname.includes("/account/") ||
+    window.location.pathname.includes("/post/")
+      ? "../account/login.html"
+      : "account/login.html";
 
   function logOutUser() {
     setTimeout(() => {

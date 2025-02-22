@@ -28,11 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const basePath = window.location.pathname.includes("/account/")
+    ? "../account/login.html"
+    : "account/login.html";
+
   function logOutUser() {
     setTimeout(() => {
       localStorage.clear();
       updateLoginLinks("Log In", "./account/login.html");
-      window.location.href = "../account/login.html";
+      window.location.href = basePath;
     }, 1000);
   }
 

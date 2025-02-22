@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       localStorage.clear();
       updateLoginLinks("Log In", "../account/login.html");
-      window.location.href = "./account/login.html";
+      window.location.href = "../account/login.html";
     }, 1000);
   }
 

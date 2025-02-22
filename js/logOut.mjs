@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
         displayMessage(
           "#message",
           "warning",
-          "You are not logged in. Please log in."
+          "You are not logged in. Please log in. Test Enviroment"
         );
         link.href = "./account/login.html";
       }
     });
   });
 
+  const depth = window.location.pathname.split("/").length - 2;
+
   const basePath =
-    window.location.pathname.includes("/account/") ||
-    window.location.pathname.includes("/post/") ||
-    window.location.pathname.includes("/pages/")
-      ? "../account/login.html"
+    depth > 0
+      ? "../".repeat(depth) + "account/login.html"
       : "account/login.html";
 
   function logOutUser() {

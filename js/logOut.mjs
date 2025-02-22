@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "warning",
           "You are not logged in. Please log in."
         );
-        link.href = "../account/login.html";
+        link.href = "./account/login.html";
       }
     });
   });
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       localStorage.clear();
       updateLoginLinks("Log In", "../account/login.html");
-      window.location.href = "../account/login.html";
+      window.location.href = "./account/login.html";
     }, 1000);
   }
 
